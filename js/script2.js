@@ -1,0 +1,3 @@
+// PRZEØÁCZANCZANIE POMIEDZY ZADANIAMI
+
+        if 

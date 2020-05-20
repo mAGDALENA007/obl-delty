@@ -1,0 +1,18 @@
+body{
+    background: url(2.jpg) no-repeat bottom center fixed; /*css3 bg cała strona DZIAŁĄ free image from: https://unsplash.com/photos/l3N9Q27zULw !!!*/
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    font-family: 'Lato', sans-serif;
+    margin: 0! important;
+    text-align: center;
+    color: darkblue;
+}
+
+p:first-letter{ /* pierwsza litera wielka str:288*/
+    font-size: 150%;
+}
+
+

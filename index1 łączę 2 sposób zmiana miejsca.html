@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Magdalena Duma edx 2.2 - function</title>
+	
+	<meta name="description" content="Magdalena Duma CV" />
+	<meta name="keywords" content="Magdalena, Duma, edx, exercise, module 2.2, Conditional statements, loops and logical operators, " />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+	<br><br>
+
+<article>
+<!-- PIERWSZY SPOSÓB + prompt -->
+<section id="firstExample">
+    <h3><strong>1#</strong> spróbuj pierwszego sposobu obl tego zadania:</h3>
+    <button type="button" id="firstBtn" onclick="myFunction()"> 1# prompt </button>
+
+    <p id="output_t"></p>
+</section>
+
+
+<!-- DRUGI SPOSÓB + forms -->
+	<section id="continue">
+        <h3><strong>2#</strong> spróbuj drugiego sposobu obl tego zadania:</h3>
+        <button type="button" id="Btn" onclick="document.getElementById('secondExample').style.display='block'"> 2# + forms </button>
+
+    <!-- formularz -->
+        <div id="secondExample" style="display:none" onload="getInput();"> <!-- onload="getInput();" -->
+        <p>Please inter the coefficients <strong>A</strong>, <strong>B</strong> and <strong>C</strong>
+			of a quadratic equation of the form <strong>Ax&#x00B2; + Bx + C = 0</strong>.</p>
+            
+            <form name="input_form" action="javascript:validate();">
+				A: <input type="text" name="aterm" size="5" required>
+				B: <input type="text" name="bterm" size="5" required>
+				C: <input type="text" name="cterm" size="5" required>
+				<br><br>
+				<input type="submit" value="Calculate">
+			</form>
+		
+            <p id="output_text"></p>
+
+       </div>  <!-- /div-->       
+	</section>   <!-- /div--> 
+</article>
+
+	<script src="js/script.js"></script>
+	<script src="js/script2.js"></script>
+	<script src="js/script3.js"></script>
+</body>
+</html>
