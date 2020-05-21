@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Magdalena Duma edx 2.2 - function</title>
+	
+	<meta name="description" content="Magdalena Duma CV" />
+	<meta name="keywords" content="Magdalena, Duma, edx, exercise, module 2.2, Conditional statements, loops and logical operators, " />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	<script>
+		var a, b, c;
+		var outputText;
+
+		function validate() {
+        
+        // get the input
+        a = document.forms["input_form"]["aterm"].value;
+        b = document.forms["input_form"]["bterm"].value;
+        c = document.forms["input_form"]["cterm"].value;
+        
+        // validate a, b and c for first function
+        if (a == 0) {
+            outputText = "<em>a</em> cannot equal zero!";
+        } else if (isNaN(a)) {
+            outputText = "<em>a</em> must be a number!";
+        } else if (isNaN(b)) {
+            outputText = "<em>b</em> must be a number!";
+        } else if (isNaN(c)) {
+            outputText = "<em>c</em> must be a number!";
+        } else {
+            // calculate the result using x = (-b +- sqrt(b^2 - 4ac)) / 2a
+            var x1 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            var x2 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            var delta = (Math.pow(b, 2) - 4 * a * c);
+			outputText = "For the equation <strong>" + (a == 1 ? "" : a) + "x\u00B2 + " + (b == 1 ? "" : b) + "x + " + c + " = 0</strong>, x can equal <strong>" + x1 + "</strong> or <strong>" + x2 + "</strong>, and 	&Delta; is equal <strong>" + delta + "</strong>.";
+        }
+        
+        // output the result (or errors)
+        document.getElementById("output_text").innerHTML = outputText;
+    }
+		
+		</script>
+
+</head>
+
+<body>
+		<br><br>
+<article>
+	<section id="firstExample">
+	<p>Please inter the coefficients <strong>a</strong>, <strong>b</strong> and <strong>c</strong>
+	of a quadratic equation of the form <strong>ax&#x00B2; + bx + c = 0</strong>.</p>
+
+		<form name="input_form" action="javascript:validate();">
+			a: <input type="text" name="aterm" size="5" required>
+			b: <input type="text" name="bterm" size="5" required>
+			c: <input type="text" name="cterm" size="5" required>
+			<br><br>
+			<input type="submit" value="Calculate">
+		</form>
+
+		<p id="output_text"></p>
+	</section>
+
+
+<!-- WRÓ© PO EVENTACH I WYØÁCZ PIERWSZE ZADANIE I WØÁCZ 2-->
+	<section id="continue" style="display:none">
+		<button type="button" id="firstBtn" onclick="document.getElementById('firstExample').style.display='none'" onclick="document.getElementById('secondExample').style.display='block'">Click Me!</button>
+	</section>
+
+	<section id="secondExample" style="display:none">
+		<p>TU BEDZIEMY BAWI© SIÉ W POØÁCZENIE DWÓCH SPOSOBÓW ROZWIÁZANIA TEGO RÓWNIANIA JESZCZE IE TEREZ PRZY EVENTACH</p>
+	</section>
+	</article>
+</body>
+</html>
